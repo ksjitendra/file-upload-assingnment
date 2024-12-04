@@ -1,0 +1,1 @@
+insert into "users" ("createdAt", "deletedAt", "email", "id", "password", "updatedAt") values ('2024-12-03 20:19:48.871+05:30', NULL, 'jitendra@gmail.com', 1, '$2b$10$XY7FObFIj6HZbCEJ9fD5..ZWEccEv6sNRitxD7Zoe/gB9xbh0aMB2', '2024-12-03 20:19:48.871+05:30');

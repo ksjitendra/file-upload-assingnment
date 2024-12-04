@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "3f241268-9b10-4428-879e-3e880bb08176",
+		"name": "Fly docs assingnmnet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29881425"
+	},
+	"item": [
+		{
+			"name": "localhost:3001/users/singup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"jitendra@gmail.com\",\n    \"password\": \"uR638219@\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/users/singup",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"users",
+						"singup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"jitendra@gmail.com\",\n    \"password\": \"uR638219@\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/auth/login/",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMzMjM4NjEzLCJleHAiOjE3MzMyNDIyMTN9.CK5442zEfRl8jUrbQGu4Y-8U6Nj_uJcgFv_wlmlAFrI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/jitendra/dummy-user.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3001/files/save/",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"files",
+						"save",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting file listing",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMzMjM4NjEzLCJleHAiOjE3MzMyNDIyMTN9.CK5442zEfRl8jUrbQGu4Y-8U6Nj_uJcgFv_wlmlAFrI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/files/list?page=1&limit=10",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"files",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getting a single file",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/files/list?page=1&limit=ff",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"files",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "ff"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleting File",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzMzMjM4NjEzLCJleHAiOjE3MzMyNDIyMTN9.CK5442zEfRl8jUrbQGu4Y-8U6Nj_uJcgFv_wlmlAFrI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/files/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"files",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
